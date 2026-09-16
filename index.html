@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio de Queila Cruz — Análise de Dados, Python, SQL, Power BI e Excel.">
+<title>Queila Cruz | Portfólio de Dados</title>
+<style>
+:root{
+  --bg:#060313; --bg2:#0b0620; --panel:#100827; --panel2:#130b31;
+  --violet:#8b3dff; --violet2:#c76bff; --pink:#ff63e6;
+  --text:#f7f2ff; --muted:#b9afd0; --line:#2b1b52;
+  --glow:0 0 28px rgba(139,61,255,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(139,61,255,.13), transparent 30%),
+    radial-gradient(circle at 90% 30%, rgba(255,99,230,.08), transparent 30%),
+    var(--bg);
+  line-height:1.65;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:10;background:rgba(6,3,19,.88);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)
+}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:var(--violet2);font-size:1.2rem}
+.navlinks{display:flex;gap:24px;font-size:.95rem;color:var(--muted)}
+.navlinks a:hover{color:white}
+.hero{padding:30px 0 80px}
+.hero-banner{
+  width:100%;display:block;border-radius:22px;border:1px solid #3b2370;
+  box-shadow:0 0 60px rgba(139,61,255,.22)
+}
+.hero-copy{padding:35px 4px 0}
+.tag{
+  display:inline-block;background:#140b31;border:1px solid #39226d;color:var(--violet2);
+  padding:7px 13px;border-radius:999px;font-size:.85rem;font-weight:700;margin-bottom:18px
+}
+h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;letter-spacing:-1.5px;margin-bottom:18px}
+h1 span{color:var(--violet2)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:760px}
+.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-flex;padding:12px 19px;border-radius:10px;font-weight:700;
+  border:1px solid var(--violet)
+}
+.btn.primary{background:linear-gradient(90deg,var(--violet),#6f30e8);color:white;box-shadow:var(--glow)}
+.btn.secondary{background:transparent;color:var(--violet2)}
+section{padding:78px 0}
+.section-title{font-size:2rem;margin-bottom:10px}
+.section-sub{color:var(--muted);margin-bottom:30px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.skill{
+  background:var(--panel);border:1px solid var(--line);padding:9px 13px;border-radius:9px;
+  font-weight:700;font-size:.9rem;color:#e8dfff
+}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{
+  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:18px;padding:25px;box-shadow:0 10px 35px rgba(0,0,0,.24);transition:.2s
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--glow);border-color:#5930a0}
+.card-icon{font-size:2rem;margin-bottom:12px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}
+.tags span{
+  font-size:.76rem;background:#1a0d3d;color:#cf9dff;padding:5px 8px;border-radius:6px;
+  font-weight:700;border:1px solid #2c1753
+}
+.card-link{color:var(--violet2);font-weight:800;font-size:.9rem}
+.timeline{border-left:2px solid #3a226b;padding-left:25px;display:grid;gap:25px}
+.timeline-item{position:relative}
+.timeline-item:before{
+  content:"";position:absolute;left:-32px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--violet2);border:3px solid #2d155a;box-shadow:0 0 14px rgba(199,107,255,.6)
+}
+.timeline-item h3{font-size:1.05rem}
+.timeline-item p{color:var(--muted)}
+.contact{
+  background:linear-gradient(135deg,#180a3f,#0c0620);border:1px solid #3a216e;
+  border-radius:28px;padding:48px;box-shadow:var(--glow)
+}
+.contact p{color:var(--muted);max-width:650px;margin:10px 0 25px}
+.contact .btn{background:#fff;color:#5f20c2;border-color:white}
+footer{text-align:center;padding:30px;color:#887da2;font-size:.9rem}
+@media(max-width:800px){
+ .about,.cards{grid-template-columns:1fr}
+ .navlinks{display:none}
+ .hero{padding-top:18px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav">
+    <div class="logo">Queila Cruz</div>
+    <div class="navlinks">
+      <a href="#sobre">Sobre</a><a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <img class="hero-banner" src="banner.gif" alt="Banner tecnológico de Queila Cruz">
+    <div class="hero-copy">
+      <div class="tag">📊 Portfólio de Análise de Dados</div>
+      <h1>Transformando <span>dados</span> em informações para gerar insights.</h1>
+      <p>
+        Sou Queila Cruz, profissional em transição para a área de Dados, com formação em
+        Administração e pós-graduação em Análise de Dados. Desenvolvo projetos práticos
+        com Python, SQL, Power BI e Excel.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#projetos">Ver meus projetos</a>
+        <a class="btn secondary" href="COLE_AQUI_SEU_LINKEDIN" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="sobre">
+  <div class="container about">
+    <div>
+      <h2 class="section-title">Sobre mim</h2>
+      <p class="section-sub">Da experiência administrativa para a análise de dados.</p>
+      <p>Minha experiência profissional me proporcionou contato com planilhas, sistemas,
+      relatórios, acompanhamento de processos e organização de informações.</p><br>
+      <p>Hoje concentro meus estudos em análise, tratamento e visualização de dados,
+      buscando unir conhecimento de negócio com ferramentas técnicas.</p>
+    </div>
+    <div id="habilidades">
+      <h2 class="section-title">Tecnologias</h2>
+      <p class="section-sub">Ferramentas presentes nos meus estudos e projetos.</p>
+      <div class="skills">
+        <span class="skill">🐍 Python</span><span class="skill">🐼 Pandas</span>
+        <span class="skill">🗄️ SQL</span><span class="skill">MySQL</span>
+        <span class="skill">📊 Power BI</span><span class="skill">Power Query</span>
+        <span class="skill">DAX</span><span class="skill">Excel</span>
+        <span class="skill">Git</span><span class="skill">GitHub</span>
+        <span class="skill">Streamlit</span><span class="skill">Plotly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="container">
+    <h2 class="section-title">Projetos em destaque</h2>
+    <p class="section-sub">Projetos práticos desenvolvidos durante minha formação em Dados.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">🛒</div><h3>GourmetBox — DataLab</h3>
+        <p>Análise integrada de CRM, ERP e e-commerce com foco em indicadores de negócio.</p>
+        <div class="tags"><span>Python</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span></div>
+        <a class="card-link" href="COLE_AQUI_O_LINK_DO_GOURMETBOX" target="_blank">Ver projeto ↗</a>
+      </article>
+      <article class="card">
+        <div class="card-icon">🐟</div><h3>Análise de Dados de Peixes</h3>
+        <p>Dashboard para exploração de dados ambientais e geográficos com visualizações interativas.</p>
+        <div class="tags"><span>Power BI</span><span>Power Query</span><span>DAX</span></div>
+        <a class="card-link" href="COLE_AQUI_O_LINK_DO_PROJETO_PEIXES" target="_blank">Ver projeto ↗</a>
+      </article>
+      <article class="card">
+        <div class="card-icon">🌸</div><h3>OrchidLog</h3>
+        <p>Tratamento e análise de dados de entregas de orquídeas, com filtros e indicadores.</p>
+        <div class="tags"><span>Python</span><span>Pandas</span></div>
+        <a class="card-link" href="COLE_AQUI_O_LINK_DO_ORCHIDLOG" target="_blank">Ver projeto ↗</a>
+      </article>
+      <article class="card">
+        <div class="card-icon">🚗</div><h3>Fleet Dashboard</h3>
+        <p>Dashboard para manutenção, combustível e utilização de veículos por filial.</p>
+        <div class="tags"><span>Power BI</span><span>DAX</span><span>Power Query</span></div>
+        <a class="card-link" href="COLE_AQUI_O_LINK_DO_FLEET" target="_blank">Ver projeto ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="formacao">
+  <div class="container">
+    <h2 class="section-title">Formação</h2>
+    <p class="section-sub">Minha trajetória acadêmica e técnica.</p>
+    <div class="timeline">
+      <div class="timeline-item"><h3>🎓 Administração — UNINOVE</h3><p>Formação concluída.</p></div>
+      <div class="timeline-item"><h3>🎓 Pós-graduação em Análise de Dados</h3><p>Formação concluída.</p></div>
+      <div class="timeline-item"><h3>🎓 Gestão de Projetos</h3><p>Formação concluída.</p></div>
+      <div class="timeline-item"><h3>💻 Análise e Desenvolvimento de Sistemas</h3><p>Curso em andamento.</p></div>
+      <div class="timeline-item"><h3>📚 Bootcamp de Análise de Dados — Generation Brasil</h3><p>Formação prática em análise de dados, programação e ferramentas de tecnologia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" id="contato">
+    <div class="contact">
+      <h2>Vamos nos conectar?</h2>
+      <p>Estou aberta a oportunidades na área de Dados e a conexões com profissionais que compartilham interesse por tecnologia e análise.</p>
+      <div class="buttons">
+        <a class="btn" href="COLE_AQUI_SEU_LINKEDIN" target="_blank">LinkedIn ↗</a>
+        <a class="btn" href="COLE_AQUI_SEU_GITHUB" target="_blank">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Queila Cruz • Portfólio de Análise de Dados</footer>
+</body>
+</html>
