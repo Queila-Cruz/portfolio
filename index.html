@@ -1,96 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Portfólio de Queila Cruz — Analista de Dados Jr. | Python, SQL, Power BI e Excel."
+    content="Portfólio de Queila Cruz — Analista de Dados Jr."
   >
 
-  <title>Queila Cruz | Analista de Dados Jr.</title>
+  <title>
+    Queila Cruz | Analista de Dados Jr.
+  </title>
+
 
   <style>
 
+    /* =========================
+       CORES
+    ========================= */
+
     :root {
-      --bg: #070317;
-      --bg-soft: #0c0520;
-      --card: #100727;
-      --card-2: #140a32;
+
+      --background: #070317;
+
+      --background-2: #0d0622;
+
+      --card: #12082c;
+
+      --card-hover: #180b3b;
 
       --purple: #8b3dff;
-      --purple-2: #a855f7;
-      --purple-3: #c77bff;
+
+      --purple-light: #b56cff;
+
+      --purple-soft: #c78bff;
+
       --pink: #ff4fd8;
 
-      --text: #f7f2ff;
-      --muted: #b9aed0;
-      --line: #2b1a4f;
+      --white: #f8f3ff;
 
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-      --glow: 0 0 28px rgba(139, 61, 255, 0.24);
+      --text: #ddd3ee;
+
+      --muted: #aaa0bd;
+
+      --border: #32186b;
+
     }
 
 
+    /* =========================
+       RESET
+    ========================= */
+
     * {
-      box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
+      box-sizing: border-box;
+
     }
 
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
 
     body {
 
       font-family:
-        Inter,
-        Segoe UI,
         Arial,
+        Helvetica,
         sans-serif;
-
-      color: var(--text);
-
-      line-height: 1.7;
-
-      min-height: 100vh;
 
       background:
 
         radial-gradient(
-          circle at 15% 5%,
-          rgba(139, 61, 255, 0.16),
-          transparent 24%
+          circle at 20% 10%,
+          rgba(139,61,255,0.15),
+          transparent 28%
         ),
 
         radial-gradient(
-          circle at 90% 25%,
-          rgba(255, 79, 216, 0.08),
-          transparent 22%
+          circle at 85% 30%,
+          rgba(255,79,216,0.08),
+          transparent 28%
         ),
 
         linear-gradient(
           180deg,
           #070317 0%,
-          #0a041b 45%,
-          #060212 100%
+          #0b041b 50%,
+          #05020f 100%
         );
+
+      color: var(--white);
+
+      line-height: 1.7;
+
+      min-height: 100vh;
+
     }
 
 
     a {
-      color: inherit;
+
       text-decoration: none;
+
+      color: inherit;
+
+    }
+
+
+    img {
+
+      max-width: 100%;
+
     }
 
 
     .container {
-      width: min(1120px, 92%);
+
+      width: 92%;
+
+      max-width: 1120px;
+
       margin: auto;
+
     }
 
 
@@ -101,60 +148,71 @@
     nav {
 
       position: sticky;
+
       top: 0;
 
-      z-index: 50;
+      z-index: 1000;
 
       background:
-        rgba(7, 3, 23, 0.88);
+        rgba(7,3,23,0.92);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter:
+        blur(12px);
 
       border-bottom:
-        1px solid rgba(139, 61, 255, 0.16);
+        1px solid rgba(139,61,255,0.25);
+
     }
 
 
-    .nav-inner {
+    .nav-container {
 
-      min-height: 70px;
+      height: 70px;
 
       display: flex;
-
-      justify-content: space-between;
 
       align-items: center;
 
-      gap: 24px;
+      justify-content: space-between;
+
     }
 
 
-    .brand {
+    .logo {
 
-      color: var(--purple-3);
+      font-size: 1.2rem;
 
-      font-size: 1.15rem;
+      font-weight: bold;
 
-      font-weight: 800;
+      color: var(--purple-soft);
 
-      letter-spacing: 0.2px;
     }
 
 
-    .nav-links {
+    .menu {
 
       display: flex;
 
-      gap: 26px;
+      gap: 25px;
 
-      color: var(--muted);
-
-      font-size: 0.92rem;
     }
 
 
-    .nav-links a:hover {
-      color: #ffffff;
+    .menu a {
+
+      color: var(--muted);
+
+      font-size: 0.9rem;
+
+      transition: 0.2s;
+
+    }
+
+
+    .menu a:hover {
+
+      color: white;
+
     }
 
 
@@ -165,218 +223,195 @@
     .hero {
 
       padding:
-        20px 0 80px;
+        25px 0 80px;
+
     }
 
 
-    .hero-banner {
+    .banner {
 
       width: 100%;
 
       display: block;
 
-      border-radius: 22px;
+      border-radius: 20px;
 
       border:
-        1px solid #3b2272;
+        1px solid var(--border);
 
       box-shadow:
-        0 0 60px rgba(139, 61, 255, 0.18);
+
+        0 0 45px
+        rgba(139,61,255,0.25);
+
     }
 
 
     .hero-content {
 
-      padding:
-        38px 2px 0;
+      padding-top: 40px;
+
     }
 
 
-    .eyebrow {
+    .label {
 
-      display: inline-flex;
+      display: inline-block;
 
-      align-items: center;
+      padding: 7px 14px;
 
-      gap: 8px;
-
-      border:
-        1px solid #3c2470;
+      border-radius: 30px;
 
       background:
-        rgba(17, 7, 39, 0.85);
+        rgba(139,61,255,0.08);
 
-      border-radius: 999px;
+      border:
+        1px solid
+        rgba(139,61,255,0.45);
 
       color:
-        var(--purple-3);
+        var(--purple-soft);
 
-      font-size: 0.84rem;
+      font-size: 0.85rem;
 
-      font-weight: 700;
+      margin-bottom: 20px;
 
-      padding:
-        7px 13px;
-
-      margin-bottom: 18px;
     }
 
 
-    h1 {
+    .hero h1 {
 
       font-size:
-        clamp(2.6rem, 6vw, 4.7rem);
+        clamp(2.5rem, 6vw, 4.6rem);
 
-      line-height:
-        1.02;
+      line-height: 1.05;
 
-      letter-spacing:
-        -2.2px;
+      margin-bottom: 22px;
 
-      max-width:
-        980px;
+      letter-spacing: -2px;
 
-      margin-bottom:
-        20px;
     }
 
 
-    h1 .accent {
+    .hero h1 span {
 
-      color:
-        var(--purple-3);
+      color: var(--purple-soft);
+
     }
 
 
-    .hero-description {
+    .hero-text {
 
-      max-width:
-        760px;
+      max-width: 750px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-size:
-        1.06rem;
+      font-size: 1.08rem;
+
     }
 
 
-    .hero-actions {
+    .buttons {
 
-      display:
-        flex;
+      display: flex;
 
-      gap:
-        12px;
+      gap: 12px;
 
-      flex-wrap:
-        wrap;
+      flex-wrap: wrap;
 
-      margin-top:
-        26px;
+      margin-top: 28px;
+
     }
 
 
-    .btn {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
+    .button {
 
       padding:
-        12px 18px;
+        12px 20px;
 
       border-radius:
         10px;
 
       font-weight:
-        800;
+        bold;
 
       border:
-        1px solid #7c31e8;
+        1px solid var(--purple);
 
       transition:
-        0.2s ease;
+        0.2s;
+
     }
 
 
-    .btn-primary {
+    .button:hover {
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .button-primary {
 
       background:
         linear-gradient(
           90deg,
-          var(--purple),
-          #6f30e8
+          #8b3dff,
+          #6f25e8
         );
 
-      color:
-        #ffffff;
+      color: white;
 
       box-shadow:
-        var(--glow);
+        0 0 25px
+        rgba(139,61,255,0.3);
+
     }
 
 
-    .btn-secondary {
+    .button-secondary {
+
+      color:
+        var(--purple-soft);
 
       background:
         transparent;
 
-      color:
-        var(--purple-3);
-    }
-
-
-    .btn:hover {
-
-      transform:
-        translateY(-2px);
     }
 
 
     /* =========================
-       SEÇÕES
+       SECTIONS
     ========================= */
 
     section {
 
       padding:
-        76px 0;
-    }
+        75px 0;
 
-
-    .section-heading {
-
-      margin-bottom:
-        28px;
     }
 
 
     .section-title {
 
       font-size:
-        2.05rem;
-
-      letter-spacing:
-        -0.5px;
+        2rem;
 
       margin-bottom:
-        7px;
+        8px;
+
     }
 
 
-    .section-subtitle {
+    .section-description {
 
       color:
         var(--muted);
 
-      max-width:
-        760px;
+      margin-bottom:
+        30px;
+
     }
 
 
@@ -384,7 +419,7 @@
        SOBRE
     ========================= */
 
-    .two-col {
+    .about-grid {
 
       display:
         grid;
@@ -393,37 +428,41 @@
         1fr 1fr;
 
       gap:
-        26px;
+        25px;
+
     }
 
 
-    .panel {
+    .box {
 
       background:
         linear-gradient(
           180deg,
-          rgba(20, 10, 50, 0.96),
-          rgba(12, 5, 30, 0.96)
+          #12082d,
+          #0d0520
         );
 
       border:
-        1px solid var(--line);
+        1px solid var(--border);
 
       border-radius:
-        20px;
+        18px;
 
       padding:
         28px;
 
       box-shadow:
-        var(--shadow);
+        0 15px 35px
+        rgba(0,0,0,0.25);
+
     }
 
 
-    .panel p {
+    .box p {
 
       color:
-        var(--muted);
+        var(--text);
+
     }
 
 
@@ -440,35 +479,37 @@
         wrap;
 
       gap:
-        9px;
+        10px;
 
       margin-top:
-        18px;
+        20px;
+
     }
 
 
     .skill {
 
-      padding:
-        8px 11px;
+      background:
+        #170a37;
+
+      color:
+        #e7d7ff;
+
+      border:
+        1px solid #38216b;
 
       border-radius:
         8px;
 
-      border:
-        1px solid #2d1b52;
-
-      background:
-        #160a36;
-
-      color:
-        #e8d9ff;
+      padding:
+        8px 12px;
 
       font-size:
-        0.86rem;
+        0.85rem;
 
       font-weight:
-        700;
+        bold;
+
     }
 
 
@@ -476,39 +517,40 @@
        PROJETOS
     ========================= */
 
-    .projects-grid {
+    .projects {
 
       display:
         grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(2, 1fr);
 
       gap:
         22px;
+
     }
 
 
-    .project-card {
+    .project {
 
       background:
         linear-gradient(
           180deg,
-          #13082e 0%,
-          #0d0522 100%
+          #14092f,
+          #0c041d
         );
 
       border:
-        1px solid var(--line);
+        1px solid var(--border);
 
       border-radius:
         18px;
 
       padding:
-        24px;
+        25px;
 
       min-height:
-        290px;
+        285px;
 
       display:
         flex;
@@ -516,26 +558,31 @@
       flex-direction:
         column;
 
-      box-shadow:
-        0 12px 34px rgba(0, 0, 0, 0.22);
-
       transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        0.25s;
+
     }
 
 
-    .project-card:hover {
+    .project:hover {
 
       transform:
         translateY(-5px);
 
+      background:
+        linear-gradient(
+          180deg,
+          #1a0d3c,
+          #0e0523
+        );
+
       border-color:
-        #5830a0;
+        #6036aa;
 
       box-shadow:
-        var(--glow);
+        0 0 30px
+        rgba(139,61,255,0.2);
+
     }
 
 
@@ -545,27 +592,30 @@
         2rem;
 
       margin-bottom:
-        12px;
+        10px;
+
     }
 
 
-    .project-card h3 {
+    .project h3 {
 
       font-size:
-        1.25rem;
+        1.2rem;
 
       margin-bottom:
-        8px;
+        10px;
+
     }
 
 
-    .project-card p {
+    .project p {
 
       color:
         var(--muted);
 
       font-size:
         0.95rem;
+
     }
 
 
@@ -581,32 +631,34 @@
         7px;
 
       margin:
-        17px 0 20px;
+        18px 0;
+
     }
 
 
-    .tags span {
+    .tag {
+
+      background:
+        #1c0d41;
+
+      color:
+        #d5b2ff;
+
+      border:
+        1px solid #352064;
+
+      padding:
+        5px 8px;
+
+      border-radius:
+        6px;
 
       font-size:
         0.75rem;
 
       font-weight:
-        800;
+        bold;
 
-      border-radius:
-        6px;
-
-      padding:
-        5px 8px;
-
-      background:
-        #1b0d41;
-
-      border:
-        1px solid #2e185a;
-
-      color:
-        #d8b8ff;
     }
 
 
@@ -616,10 +668,11 @@
         auto;
 
       color:
-        var(--purple-3);
+        var(--purple-light);
 
       font-weight:
-        800;
+        bold;
+
     }
 
 
@@ -633,41 +686,15 @@
         grid;
 
       gap:
-        18px;
-
-      position:
-        relative;
+        22px;
 
       padding-left:
-        24px;
-    }
+        25px;
 
+      border-left:
+        2px solid
+        #3b1c70;
 
-    .timeline::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      left:
-        5px;
-
-      top:
-        3px;
-
-      bottom:
-        3px;
-
-      width:
-        2px;
-
-      background:
-        linear-gradient(
-          var(--purple),
-          #3d1d70
-        );
     }
 
 
@@ -676,49 +703,46 @@
       position:
         relative;
 
-      padding:
-        1px 0 1px 18px;
     }
 
 
     .timeline-item::before {
 
-      content:
-        "";
+      content: "";
 
       position:
         absolute;
 
       left:
-        -24px;
+        -32px;
 
       top:
-        9px;
+        8px;
 
       width:
-        10px;
+        11px;
 
       height:
-        10px;
-
-      background:
-        var(--purple-3);
+        11px;
 
       border-radius:
         50%;
 
+      background:
+        var(--purple-light);
+
       box-shadow:
-        0 0 14px rgba(199, 123, 255, 0.65);
+        0 0 14px
+        rgba(181,108,255,0.6);
+
     }
 
 
     .timeline-item h3 {
 
-      font-size:
-        1.02rem;
-
       margin-bottom:
         3px;
+
     }
 
 
@@ -726,6 +750,7 @@
 
       color:
         var(--muted);
+
     }
 
 
@@ -733,7 +758,15 @@
        TABELA
     ========================= */
 
-    .knowledge-table {
+    .table-wrapper {
+
+      overflow-x:
+        auto;
+
+    }
+
+
+    table {
 
       width:
         100%;
@@ -741,55 +774,60 @@
       border-collapse:
         collapse;
 
-      overflow:
-        hidden;
-
-      border-radius:
-        16px;
-
       background:
         #0e0523;
 
       border:
-        1px solid var(--line);
+        1px solid var(--border);
+
+      border-radius:
+        15px;
+
+      overflow:
+        hidden;
+
     }
 
 
-    .knowledge-table th,
-    .knowledge-table td {
+    th,
+    td {
 
       padding:
-        14px 16px;
+        14px;
 
       text-align:
         left;
 
       border-bottom:
-        1px solid var(--line);
+        1px solid var(--border);
+
     }
 
 
-    .knowledge-table th {
-
-      color:
-        #f5eaff;
+    th {
 
       background:
         #14082f;
+
+      color:
+        white;
+
     }
 
 
-    .knowledge-table td {
+    td {
 
       color:
         var(--muted);
+
     }
 
 
-    .knowledge-table tr:last-child td {
+    tr:last-child td {
 
       border-bottom:
         none;
+
     }
 
 
@@ -797,73 +835,74 @@
        EXPERIÊNCIA
     ========================= */
 
-    .quote {
+    .highlight {
 
       border-left:
-        3px solid var(--purple-2);
+        3px solid
+        var(--purple-2);
 
       padding:
-        4px 0 4px 16px;
+        8px 0 8px 18px;
 
       color:
-        #e4d8f3;
+        var(--text);
 
       background:
-        rgba(139, 61, 255, 0.04);
+        rgba(139,61,255,0.04);
+
     }
 
 
     /* =========================
-       CTA
+       CONTATO
     ========================= */
 
-    .portfolio-cta {
+    .contact {
 
       text-align:
         center;
 
+      padding:
+        50px 25px;
+
+      border-radius:
+        22px;
+
+      border:
+        1px solid #402170;
+
       background:
 
         radial-gradient(
-          circle at center,
-          rgba(139, 61, 255, 0.14),
-          transparent 52%
+          circle,
+          rgba(139,61,255,0.15),
+          transparent 55%
         ),
 
         linear-gradient(
           180deg,
-          #12072b,
-          #0a0418
+          #14082f,
+          #090318
         );
 
-      border:
-        1px solid #3a2069;
-
-      border-radius:
-        24px;
-
-      padding:
-        48px 30px;
-
-      box-shadow:
-        var(--glow);
     }
 
 
-    .portfolio-cta p {
+    .contact p {
 
       color:
         var(--muted);
 
-      margin:
-        8px auto 24px;
-
       max-width:
-        680px;
+        650px;
+
+      margin:
+        10px auto 25px;
+
     }
 
 
-    .socials {
+    .contact-buttons {
 
       display:
         flex;
@@ -876,133 +915,97 @@
 
       flex-wrap:
         wrap;
+
     }
 
 
     /* =========================
-       RODAPÉ
+       FOOTER
     ========================= */
 
     footer {
-
-      padding:
-        30px 0 40px;
 
       text-align:
         center;
 
       color:
-        #887c9f;
+        #857996;
+
+      padding:
+        30px;
 
       font-size:
-        0.88rem;
+        0.85rem;
+
     }
 
 
     /* =========================
-       RESPONSIVO
+       CELULAR
     ========================= */
 
     @media (max-width: 850px) {
 
-      .nav-links {
+      .menu {
+
         display:
           none;
+
       }
 
 
-      .two-col,
-      .projects-grid {
+      .about-grid,
+      .projects {
 
         grid-template-columns:
           1fr;
+
       }
 
-
-      h1 {
-
-        letter-spacing:
-          -1.3px;
-      }
-
-
-      .hero {
-
-        padding-bottom:
-          55px;
-      }
     }
 
 
-    @media (max-width: 560px) {
+    @media (max-width: 550px) {
 
-      .container {
+      .hero h1 {
 
-        width:
-          min(94%, 1120px);
+        font-size:
+          2.6rem;
+
       }
 
 
-      section {
+      .box,
+      .project {
 
         padding:
-          58px 0;
+          20px;
+
       }
 
-
-      .panel,
-      .project-card {
-
-        padding:
-          21px;
-      }
-
-
-      .hero-content {
-
-        padding-top:
-          27px;
-      }
-
-
-      .hero-banner {
-
-        border-radius:
-          16px;
-      }
-
-
-      .knowledge-table {
-
-        display:
-          block;
-
-        overflow-x:
-          auto;
-      }
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- =========================
-       MENU
-  ========================= -->
+  <!-- MENU -->
 
   <nav>
 
-    <div class="container nav-inner">
+    <div class="container nav-container">
 
-      <div class="brand">
+
+      <div class="logo">
         Queila Cruz
       </div>
 
 
-      <div class="nav-links">
+      <div class="menu">
 
         <a href="#sobre">
           Sobre
@@ -1030,15 +1033,14 @@
 
       </div>
 
+
     </div>
 
   </nav>
 
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <header class="hero">
 
@@ -1046,8 +1048,8 @@
 
 
       <img
+        class="banner"
         src="banner.gif"
-        class="hero-banner"
         alt="Queila Cruz — Analista de Dados Jr."
       >
 
@@ -1055,7 +1057,7 @@
       <div class="hero-content">
 
 
-        <div class="eyebrow">
+        <div class="label">
           📊 Portfólio de Análise de Dados
         </div>
 
@@ -1063,9 +1065,7 @@
         <h1>
 
           Transformando
-          <span class="accent">
-            dados
-          </span>
+          <span>dados</span>
 
           em informações para gerar
           insights e apoiar decisões.
@@ -1073,7 +1073,7 @@
         </h1>
 
 
-        <p class="hero-description">
+        <p class="hero-text">
 
           Sou Queila Cruz, formada em Administração,
           com pós-graduação em Análise de Dados.
@@ -1084,28 +1084,25 @@
         </p>
 
 
-        <div class="hero-actions">
+        <div class="buttons">
+
 
           <a
-            class="btn btn-primary"
+            class="button button-primary"
             href="#projetos"
           >
-
             Ver meus projetos
-
           </a>
 
 
           <a
-            class="btn btn-secondary"
+            class="button button-secondary"
             href="https://www.linkedin.com/in/queila-santos-cruz/"
             target="_blank"
-            rel="noopener noreferrer"
           >
-
             LinkedIn ↗
-
           </a>
+
 
         </div>
 
@@ -1120,40 +1117,30 @@
   <main>
 
 
-    <!-- =========================
-         SOBRE
-    ========================= -->
+    <!-- SOBRE -->
 
     <section id="sobre">
 
-      <div class="container two-col">
+      <div class="container about-grid">
 
 
-        <div class="panel">
+        <div class="box">
 
 
-          <div class="section-heading">
-
-            <h2 class="section-title">
-              👩‍💻 Sobre mim
-            </h2>
+          <h2 class="section-title">
+            👩‍💻 Sobre mim
+          </h2>
 
 
-            <p class="section-subtitle">
-              Da experiência administrativa para
-              a análise de dados.
-            </p>
-
-          </div>
+          <p class="section-description">
+            Da experiência administrativa para a análise de dados.
+          </p>
 
 
           <p>
 
             Sou formada em
-            <strong>
-              Administração
-            </strong>,
-
+            <strong>Administração</strong>,
             com
             <strong>
               pós-graduação em Análise de Dados
@@ -1187,15 +1174,13 @@
 
           <p>
 
-            Atualmente, desenvolvo projetos práticos
-            utilizando ferramentas de análise e
-            visualização de dados, buscando transformar
-            informações em
+            Desenvolvo projetos práticos para
+            transformar dados em
 
             <strong>
-              insights claros, indicadores
-              e oportunidades de melhoria
-            </strong>.
+              insights, indicadores
+              e oportunidades de melhoria.
+            </strong>
 
           </p>
 
@@ -1204,102 +1189,56 @@
 
 
 
-        <!-- =========================
-             TECNOLOGIAS
-        ========================= -->
+        <!-- HABILIDADES -->
 
         <div
-          class="panel"
+          class="box"
           id="habilidades"
         >
 
 
-          <div class="section-heading">
-
-            <h2 class="section-title">
-              🛠️ Tecnologias & Ferramentas
-            </h2>
+          <h2 class="section-title">
+            🛠️ Tecnologias & Ferramentas
+          </h2>
 
 
-            <p class="section-subtitle">
-
-              Tecnologias utilizadas nos meus
-              estudos e projetos.
-
-            </p>
-
-          </div>
+          <p class="section-description">
+            Tecnologias utilizadas nos meus estudos e projetos.
+          </p>
 
 
           <div class="skills">
 
+            <span class="skill">Python</span>
 
-            <span class="skill">
-              Python
-            </span>
+            <span class="skill">Pandas</span>
 
+            <span class="skill">SQL</span>
 
-            <span class="skill">
-              Pandas
-            </span>
+            <span class="skill">MySQL</span>
 
+            <span class="skill">Power BI</span>
 
-            <span class="skill">
-              SQL
-            </span>
+            <span class="skill">Power Query</span>
 
+            <span class="skill">DAX</span>
 
-            <span class="skill">
-              MySQL
-            </span>
+            <span class="skill">Excel</span>
 
+            <span class="skill">Git</span>
 
-            <span class="skill">
-              Power BI
-            </span>
+            <span class="skill">GitHub</span>
 
+            <span class="skill">Streamlit</span>
 
-            <span class="skill">
-              Power Query
-            </span>
-
-
-            <span class="skill">
-              DAX
-            </span>
-
-
-            <span class="skill">
-              Excel
-            </span>
-
-
-            <span class="skill">
-              Git
-            </span>
-
-
-            <span class="skill">
-              GitHub
-            </span>
-
-
-            <span class="skill">
-              Streamlit
-            </span>
-
-
-            <span class="skill">
-              Plotly
-            </span>
-
+            <span class="skill">Plotly</span>
 
             <span class="skill">
               Modelagem de Dados
             </span>
 
-
           </div>
+
 
         </div>
 
@@ -1309,9 +1248,7 @@
 
 
 
-    <!-- =========================
-         PROJETOS
-    ========================= -->
+    <!-- PROJETOS -->
 
     <section id="projetos">
 
@@ -1319,32 +1256,25 @@
       <div class="container">
 
 
-        <div class="section-heading">
+        <h2 class="section-title">
+          📂 Projetos em destaque
+        </h2>
 
 
-          <h2 class="section-title">
-            📂 Projetos em destaque
-          </h2>
+        <p class="section-description">
+
+          Projetos práticos desenvolvidos
+          durante minha formação em Dados.
+
+        </p>
 
 
-          <p class="section-subtitle">
-
-            Projetos práticos desenvolvidos
-            durante minha formação em Dados.
-
-          </p>
+        <div class="projects">
 
 
-        </div>
+          <!-- GOURMETBOX -->
 
-
-
-        <div class="projects-grid">
-
-
-          <!-- GourmetBox -->
-
-          <article class="project-card">
+          <article class="project">
 
 
             <div class="project-icon">
@@ -1360,29 +1290,29 @@
             <p>
 
               Análise integrada de CRM,
-              ERP e e-commerce com foco em
-              indicadores de negócio, incluindo
-              margem bruta, ticket médio
-              e Fancy Score.
+              ERP e e-commerce com foco
+              em indicadores de negócio,
+              incluindo margem bruta,
+              ticket médio e Fancy Score.
 
             </p>
 
 
             <div class="tags">
 
-              <span>
+              <span class="tag">
                 Python
               </span>
 
-              <span>
+              <span class="tag">
                 Pandas
               </span>
 
-              <span>
+              <span class="tag">
                 Plotly
               </span>
 
-              <span>
+              <span class="tag">
                 Streamlit
               </span>
 
@@ -1393,11 +1323,8 @@
               class="project-link"
               href="https://projetocaseefeitofancy-jgy8yg8tcl4ptpqhjbkhcf.streamlit.app/"
               target="_blank"
-              rel="noopener noreferrer"
             >
-
               Ver projeto ↗
-
             </a>
 
 
@@ -1405,9 +1332,9 @@
 
 
 
-          <!-- Peixes -->
+          <!-- PEIXES -->
 
-          <article class="project-card">
+          <article class="project">
 
 
             <div class="project-icon">
@@ -1435,15 +1362,15 @@
 
             <div class="tags">
 
-              <span>
+              <span class="tag">
                 Power BI
               </span>
 
-              <span>
+              <span class="tag">
                 Power Query
               </span>
 
-              <span>
+              <span class="tag">
                 DAX
               </span>
 
@@ -1454,11 +1381,8 @@
               class="project-link"
               href="https://github.com/Queila-Cruz/Quality_water"
               target="_blank"
-              rel="noopener noreferrer"
             >
-
               Ver projeto ↗
-
             </a>
 
 
@@ -1466,9 +1390,9 @@
 
 
 
-          <!-- Fleet -->
+          <!-- FLEET -->
 
-          <article class="project-card">
+          <article class="project">
 
 
             <div class="project-icon">
@@ -1493,15 +1417,15 @@
 
             <div class="tags">
 
-              <span>
+              <span class="tag">
                 Power BI
               </span>
 
-              <span>
+              <span class="tag">
                 DAX
               </span>
 
-              <span>
+              <span class="tag">
                 Power Query
               </span>
 
@@ -1512,11 +1436,8 @@
               class="project-link"
               href="https://datastudio.google.com/reporting/7fed8e50-c726-45f7-b2ca-0639151ad2f9"
               target="_blank"
-              rel="noopener noreferrer"
             >
-
               Ver projeto ↗
-
             </a>
 
 
@@ -1524,9 +1445,9 @@
 
 
 
-          <!-- Vendas -->
+          <!-- VENDAS -->
 
-          <article class="project-card">
+          <article class="project">
 
 
             <div class="project-icon">
@@ -1543,23 +1464,23 @@
 
               Dashboard desenvolvido no
               Power BI para análise de vendas,
-              indicadores comerciais e
-              acompanhamento dos resultados.
+              indicadores comerciais
+              e acompanhamento dos resultados.
 
             </p>
 
 
             <div class="tags">
 
-              <span>
+              <span class="tag">
                 Power BI
               </span>
 
-              <span>
+              <span class="tag">
                 DAX
               </span>
 
-              <span>
+              <span class="tag">
                 Power Query
               </span>
 
@@ -1570,11 +1491,8 @@
               class="project-link"
               href="https://github.com/Queila-Cruz/dashboard-power-bi/tree/main"
               target="_blank"
-              rel="noopener noreferrer"
             >
-
               Ver projeto ↗
-
             </a>
 
 
@@ -1589,9 +1507,7 @@
 
 
 
-    <!-- =========================
-         FORMAÇÃO
-    ========================= -->
+    <!-- FORMAÇÃO -->
 
     <section id="formacao">
 
@@ -1599,27 +1515,17 @@
       <div class="container">
 
 
-        <div class="section-heading">
+        <h2 class="section-title">
+          🎓 Formação
+        </h2>
 
 
-          <h2 class="section-title">
-            🎓 Formação
-          </h2>
+        <p class="section-description">
+          Minha trajetória acadêmica e técnica.
+        </p>
 
 
-          <p class="section-subtitle">
-
-            Minha trajetória acadêmica
-            e técnica.
-
-          </p>
-
-
-        </div>
-
-
-
-        <div class="panel">
+        <div class="box">
 
 
           <div class="timeline">
@@ -1687,8 +1593,8 @@
               <p>
 
                 Formação prática em análise
-                de dados, programação e
-                ferramentas de tecnologia.
+                de dados, programação
+                e ferramentas de tecnologia.
 
               </p>
 
@@ -1705,9 +1611,7 @@
 
 
 
-    <!-- =========================
-         CONHECIMENTOS
-    ========================= -->
+    <!-- CONHECIMENTOS -->
 
     <section>
 
@@ -1715,172 +1619,171 @@
       <div class="container">
 
 
-        <div class="section-heading">
+        <h2 class="section-title">
+          📌 Conhecimentos em desenvolvimento
+        </h2>
 
 
-          <h2 class="section-title">
-            📌 Conhecimentos em desenvolvimento
-          </h2>
+        <p class="section-description">
+
+          Principais áreas e ferramentas
+          que venho aprofundando.
+
+        </p>
 
 
-          <p class="section-subtitle">
+        <div class="table-wrapper">
 
-            Principais áreas e ferramentas
-            que venho aprofundando.
 
-          </p>
+          <table>
+
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Área
+                </th>
+
+                <th>
+                  Ferramentas
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Programação
+                  </strong>
+                </td>
+
+                <td>
+                  Python, Pandas
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Banco de Dados
+                  </strong>
+                </td>
+
+                <td>
+                  SQL, MySQL
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Business Intelligence
+                  </strong>
+                </td>
+
+                <td>
+                  Power BI, DAX, Power Query
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Planilhas
+                  </strong>
+                </td>
+
+                <td>
+                  Excel
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Visualização
+                  </strong>
+                </td>
+
+                <td>
+                  Plotly
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Versionamento
+                  </strong>
+                </td>
+
+                <td>
+                  Git, GitHub
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Aplicações de Dados
+                  </strong>
+                </td>
+
+                <td>
+                  Streamlit
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>
+                    Modelagem
+                  </strong>
+                </td>
+
+                <td>
+                  Modelagem de Dados
+                </td>
+
+              </tr>
+
+
+            </tbody>
+
+          </table>
 
 
         </div>
-
-
-
-        <table class="knowledge-table">
-
-
-          <thead>
-
-            <tr>
-
-              <th>
-                Área
-              </th>
-
-              <th>
-                Ferramentas
-              </th>
-
-            </tr>
-
-          </thead>
-
-
-          <tbody>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Programação
-                </strong>
-              </td>
-
-              <td>
-                Python, Pandas
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Banco de Dados
-                </strong>
-              </td>
-
-              <td>
-                SQL, MySQL
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Business Intelligence
-                </strong>
-              </td>
-
-              <td>
-                Power BI, DAX, Power Query
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Planilhas
-                </strong>
-              </td>
-
-              <td>
-                Excel
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Visualização
-                </strong>
-              </td>
-
-              <td>
-                Plotly
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Versionamento
-                </strong>
-              </td>
-
-              <td>
-                Git, GitHub
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Aplicações de Dados
-                </strong>
-              </td>
-
-              <td>
-                Streamlit
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                <strong>
-                  Modelagem
-                </strong>
-              </td>
-
-              <td>
-                Modelagem de Dados
-              </td>
-
-            </tr>
-
-
-          </tbody>
-
-        </table>
 
       </div>
 
@@ -1888,9 +1791,7 @@
 
 
 
-    <!-- =========================
-         EXPERIÊNCIA
-    ========================= -->
+    <!-- EXPERIÊNCIA -->
 
     <section id="experiencia">
 
@@ -1898,27 +1799,20 @@
       <div class="container">
 
 
-        <div class="section-heading">
+        <h2 class="section-title">
+          💼 Experiência Profissional
+        </h2>
 
 
-          <h2 class="section-title">
-            💼 Experiência Profissional
-          </h2>
+        <p class="section-description">
+
+          Competências desenvolvidas ao longo
+          da minha experiência administrativa.
+
+        </p>
 
 
-          <p class="section-subtitle">
-
-            Competências desenvolvidas ao longo
-            da minha experiência administrativa.
-
-          </p>
-
-
-        </div>
-
-
-
-        <div class="panel">
+        <div class="box">
 
 
           <p>
@@ -1934,7 +1828,8 @@
           <br>
 
 
-          <div class="quote">
+          <div class="highlight">
+
 
             <strong>
 
@@ -1947,6 +1842,7 @@
               Suporte às áreas internas
 
             </strong>
+
 
           </div>
 
@@ -1965,15 +1861,14 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
 
-    <!-- =========================
-         CONTATO
-    ========================= -->
+    <!-- CONTATO -->
 
     <section id="contato">
 
@@ -1981,11 +1876,13 @@
       <div class="container">
 
 
-        <div class="portfolio-cta">
+        <div class="contact">
 
 
           <h2 class="section-title">
+
             🌐 Conheça meu portfólio
+
           </h2>
 
 
@@ -1998,14 +1895,13 @@
           </p>
 
 
-          <div class="socials">
+          <div class="contact-buttons">
 
 
             <a
-              class="btn btn-primary"
+              class="button button-primary"
               href="https://queila-cruz.github.io/portfolio/"
               target="_blank"
-              rel="noopener noreferrer"
             >
 
               Acessar Portfólio ↗
@@ -2014,10 +1910,9 @@
 
 
             <a
-              class="btn btn-secondary"
+              class="button button-secondary"
               href="https://www.linkedin.com/in/queila-santos-cruz/"
               target="_blank"
-              rel="noopener noreferrer"
             >
 
               LinkedIn ↗
@@ -2026,10 +1921,9 @@
 
 
             <a
-              class="btn btn-secondary"
+              class="button button-secondary"
               href="https://github.com/Queila-Cruz"
               target="_blank"
-              rel="noopener noreferrer"
             >
 
               GitHub ↗
@@ -2060,4 +1954,5 @@
 
 
 </body>
+
 </html>
